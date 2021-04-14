@@ -1,0 +1,91 @@
+
+<div class="text-layout">
+
+    <h1>Pipes Básicos</h1>
+    <p>
+        Pipes incluidos en Angular - Usualmente en el Common Module
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-4">
+        <p-card header="Uppercase Pipe" subheader="Pasamos variable nombreLower a Uppercase">
+            Original -> {{nombreLower}} <br>
+            Transformado -> {{nombreLower|uppercase}} <br>
+            Comando -> nombreLower | uppercase
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card header="Lowercase Pipe" subheader="Pasamos variable nombreUpper a Lowercase">
+            Original -> {{nombreUpper}} <br>
+            Transformado -> {{nombreUpper|lowercase}} <br>
+            Comando -> nombreUpper | lowercase
+        </p-card>
+    </div>
+    <div class="p-col-4">
+        <p-card header="Titlecase Pipe" subheader="Pasamos variable nombreTitle a Titlecase">
+            Original -> {{nombreTitle}} <br>
+            Transformado -> {{nombreTitle|titlecase}} <br>
+            Comando -> nombreTitle | titlecase
+        </p-card>
+    </div>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-12">
+        <p-card header="Date Pipe" subheader="Pipes para mostrar las fechas. Original -> {{fecha}}">
+            <div class="p-grid">
+                <div class="p-col-3">
+                    <p-card header="Fecha con Pipe sin argumento">
+                        Comando -> fecha | date <br>
+                        Resultado ->  {{fecha | date}} 
+                    </p-card>
+                </div>
+                <div class="p-col-3">
+                    <p-card header="Fecha corta">
+                        Comando -> fecha | date:'short' <br>
+                        Resultado ->  {{fecha|date:'short'}}
+                    </p-card>
+                </div>
+                <div class="p-col-3">
+                    <p-card header="Fecha larga">
+                        Comando -> fecha | date:'long' <br>
+                        Resultado ->  {{fecha|date:'long'}}
+                    </p-card>
+                </div>
+                <div class="p-col-3">
+                    <p-card header="Fecha personalizada">
+                        Comando -> fecha | date:'EEEE d/M/yyyy H:m'|titlecase <br>
+                        Resultado ->  {{fecha | date:'EEEE d/M/yyyy H:m'|titlecase}} 
+                    </p-card>
+                </div>
+            </div>
+            <hr>
+            <div class="p-grid">
+                <div class="p-col-4">
+                    <p-card header="Cambio de zona a GMT-6">
+                        Comando -> fecha | date:'long':'GMT-6' <br>
+                        Resultado ->  {{fecha | date:'long':'GMT-6'}} 
+                    </p-card>
+                </div>
+                <div class="p-col-4">
+                    <p-card header="Cambio de zona a GMT-4">
+                        Comando -> fecha | date:'long':'GMT-4' <br>
+                        Resultado ->  {{fecha | date:'long':'GMT-4'}} 
+                    </p-card>
+                </div>
+                <div class="p-col-4">
+                    <p-card header="Cambio de idioma por argumento">
+                        Comando -> fecha | date:'long':'':'en' <br>
+                        Resultado ->  {{fecha | date:'long':'':'en'}} 
+                    </p-card>
+                </div>
+            </div>
+        </p-card>
+    </div>
+</div>
+
+
+
+
+

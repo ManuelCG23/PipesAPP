@@ -1,0 +1,89 @@
+
+<div class="text-layout">
+
+    <h1>Decimal Pipe y Porcentajes</h1>
+    <p>
+        Pipes incluidos en Angular - Usualmente en el Common Module
+    </p>
+</div>
+
+<div class="p-grid">
+    <div class="p-col-8">
+        <p-card header="Decimal Pipe" subheader="Hacemos uso del Pipe number, conocido como Decimal Pipe">
+            <div class="p-grid">
+                <div class="p-col-6">
+                    <p-card header="Ventas Netas(1)" subheader="Manjeamos una venta con el pipe number sin argumentos">
+                       Original -> {{ventasNetas}} € <br>
+                       Resultado -> {{ventasNetas | number}} € <br>
+                       Comando -> ventasNetas | number
+                    </p-card>
+                </div>
+                <div class="p-col-6">
+                    <p-card header="Ventas Netas(2)" subheader="Añadimos argumentos. Redondeo a dos decimales">
+                        Sin argumentos -> {{ventasNetas | number}} € <br>
+                        Con argumentos -> {{ventasNetas | number:'1.2-2'}} € <br>
+                        Comando -> ventasNetas | number:'1.2-2'
+                     </p-card>
+                </div>
+            </div>
+        </p-card>
+    </div>
+</div>
+
+<hr><br>
+
+<div class="p-grid">
+    <div class="p-col-12">
+        <p-card header="Currency Pipe" subheader="Hacemos uso del Pipe currency para el manejo de la moneda">
+            <div class="p-grid">
+                <div class="p-col-4">
+                    <p-card header="Ventas Brutas(1)" subheader="Manjeamos una venta con el pipe currency sin argumenentos/por defecto">
+                       Resultado -> {{ventasNetas | currency}}  <br>
+                       Comando -> ventasNetas | currency
+                    </p-card>
+                </div>
+                <div class="p-col-4">
+                    <p-card header="Ventas Brutas(2)" subheader="Indicamos la moneda que queramos">
+                       Antes(sin argumentos) -> {{ventasNetas | currency}} <br>
+                       Resultado -> {{ventasNetas | currency:'EUR'}}  <br>
+                       Comando -> ventasNetas | currency:'EUR'
+                    </p-card>
+                </div>
+                <div class="p-col-4">
+                    <p-card header="Ventas Brutas(3)" subheader="Indicamos el simbolo para aquellos casos en los que tienen formar larga">
+                       Antes->{{ventasNetas | currency:'CAD'}} <br>
+                       Resultado -> {{ventasNetas | currency:'CAD':'symbol-narrow'}}  <br>
+                       Comando -> ventasNetas | currency:'CAD':'symbol-narrow'
+                    </p-card>
+                </div>
+            </div>
+        </p-card>
+    </div>
+</div>
+
+<hr><br>
+
+<div class="p-grid">
+    <div class="p-col-8">
+        <p-card header="Percent Pipe" subheader="Hacemos uso del Pipe percent para el manejo del porcentaje">
+            <div class="p-grid">
+                <div class="p-col-6">
+                    <p-card header="Ganancia porcentual(1)" subheader="Manejeamos una variable porcentaje sin el uso de argumenentos">
+                      Original -> {{porcentaje}} <br>
+                      Resultado-> {{porcentaje | percent}} <br>
+                      Comando -> porcentaje | percent
+                    </p-card>
+                </div>
+                <div class="p-col-6">
+                    <p-card header="Ganancia porcentual(2)" subheader="Usamos los decimales">
+                      Antes -> {{porcentaje | percent}} <br>
+                      Resultado-> {{porcentaje | percent:'2.2-2'}} <br>
+                      Comando -> porcentaje | percent:'2.2-2'
+                    </p-card>
+                </div>
+            </div>
+        </p-card>
+    </div>
+</div>
+
+
